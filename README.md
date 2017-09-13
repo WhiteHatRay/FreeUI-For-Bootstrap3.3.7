@@ -1,6 +1,8 @@
 # FreeUI-For-Bootstrap3.3.7
 
-<center>![FreeUI For Bootstrap](https://raw.githubusercontent.com/WhiteHatRay/FreeUI-For-Bootstrap3.3.7/master/img/logo.png "FreeUI For Bootstrap")</center>
+<center>
+  ![FreeUI For Bootstrap](https://raw.githubusercontent.com/WhiteHatRay/FreeUI-For-Bootstrap3.3.7/master/img/logo.png "FreeUI For Bootstrap")
+</center>
 
 This is a css&js project to support bootstrap. Base on bootstrap v3.3.7, I developed some css&js code to improve the effects.
 prefect!!
