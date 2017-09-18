@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1"/>
+		
+		<link rel="stylesheet" href="../../css/bootstrap.css"/>
+		<link rel="stylesheet" href="../../css/font-awesome.css"/>
+		<!--free css-->
+		<link rel="stylesheet" href="../../css/free.css"/>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<!--[if lt IE 9]>
+		 	<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+		   	<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		   	<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		   	<script src="https://cdn.bootcss.com/jquery-placeholder/2.3.1/jquery.placeholder.js"></script>
+		   	<script>
+		   	$(function(){
+		   		$('input').placeholder();
+		   	});
+		   	</script>  
+		<![endif]-->
+		<script src="../../js/bootstrap.js"></script>
+		<!--free Javascript-->
+		<script src="../../js/free.js"></script>
+		
+		<title>分页</title>
+	</head>
+	<body>
+		<nav id="pagination_1">
+			<ul class="free-pagination">
+			</ul>
+		</nav>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$.pagination.config({
+					paginationId: 'pagination_1',
+					currentPage: 10,
+					sumPages: 20
+				});
+			});
+		</script>
+</html>
