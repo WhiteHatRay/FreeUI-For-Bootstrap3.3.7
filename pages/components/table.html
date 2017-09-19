@@ -64,10 +64,46 @@
 			</tbody>
 		</table>
 		
-		<div class="free-table-bar free-table-bar-cool">
-			<div class="free-table-bar-item">
-				<i class="fa fa-file-text" aria-hidden="true"></i>详情
-			</div>
-		</div>
+		<ul class="free-table-bar" id="free-table-bar">
+			<li class="free-table-bar-item"><a href="pagination.html"><i class="fa fa-angle-double-left" aria-hidden="true"></i>详情</a></li>
+			<li class="free-table-bar-item"><i class="fa fa-angle-double-left" aria-hidden="true"></i></li>
+			<li class="free-table-bar-item"><i class="fa fa-angle-double-left" aria-hidden="true"></i></li>
+		</ul>
+		
+		<script>
+			var myfunc = function(){
+				alert(2);
+			}
+			var myfunc2 = function(){
+				alert(3);
+			}
+			$(document).ready(function(){
+				$.freetable.config('free-table-bar', [
+					{
+						icon: '<i class="fa fa-angle-double-left" aria-hidden="true"></i>',
+						name: '链接',
+						type: 'link',
+						href: "http://www.baidu.com"
+					}, 
+					{
+						icon: '<i class="fa fa-angle-double-right" aria-hidden="true"></i>',
+						name: '链接',
+						type: 'link',
+						href: "http://www.baidu.com"
+					}, 
+					{
+						icon: '<i class="fa fa-angle-double-up" aria-hidden="true"></i>',
+						name: '方法',
+						type: 'action',
+						customFunction: 'myfunc()'
+					}, {
+						icon: '<i class="fa fa-angle-double-up" aria-hidden="true"></i>',
+						name: '方法',
+						type: 'action',
+						customFunction: 'myfunc2()'
+					}, 
+				]);
+			});
+		</script>
 	</body>
 </html>

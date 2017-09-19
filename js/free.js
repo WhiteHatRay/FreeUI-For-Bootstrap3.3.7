@@ -77,8 +77,6 @@ $(document).ready(function(){
 		$(this).addClass('selected');
 	});
 	
-	
-	
 	//分页
 	$.pagination = {
 		//config array(currentPage, sumPages)
@@ -131,6 +129,30 @@ $(document).ready(function(){
 				} else if($(this).attr('data-target') == 'next' && currentPage < sumPages){
 					self.location = replaceParamVal(uri, "page", currentPage+1);
 				}
+			});
+		}
+	};
+				
+	//table功能栏
+	$.freetable = {
+		config: function(barId, functionBtnArr){
+			var barId = barId; //功能栏ID
+			$.each(functionBtnArr, function(n, value) {
+				var icon = value['icon']; //
+				var name =  value['name'];
+				var type = value['type']; //按钮类型（link; action）
+				if(type == "link"){
+					//链接按钮
+					var href = value['href'];
+					$('#' + barId).append('<li class="free-table-bar-item"><a href="'+ href +'">'+ icon + name +'</a></li>');
+				} else if(type == "action"){
+					//action按钮，点击执行某段代码
+					var customFunction = value['customFunction'];
+					$('#' + barId).append('<li class="free-table-bar-item">'+ icon + name +'</li>');
+					$('#' + barId).children("li:last-child").click(function(){
+						eval(customFunction);
+					});
+				}				
 			});
 		}
 	};
